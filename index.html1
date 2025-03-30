@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KJTooFlawless Music Distribution</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background: #222; color: white; padding: 20px; font-size: 24px; }
+        .container { margin: 50px auto; max-width: 600px; background: white; padding: 20px; border-radius: 8px; }
+        input, button { width: 100%; padding: 10px; margin: 10px 0; }
+        button { background: #222; color: white; border: none; cursor: pointer; }
+        button:hover { background: #444; }
+        #uploadSection { display: none; }
+    </style>
+</head>
+<body>
+    <header>KJTooFlawless Music Distribution</header>
+    <div class="container" id="authSection">
+        <h2>Sign Up / Log In</h2>
+        <input type="text" id="username" placeholder="Enter Username">
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="registerUser()">Sign Up / Log In</button>
+        <p id="message"></p>
+    </div>
+
+    <div class="container" id="uploadSection">
+        <h2>Upload Your Music</h2>
+        <input type="file" id="musicFile" accept="audio/*">
+        <button onclick="uploadMusic()">Upload</button>
+        <p id="uploadMessage"></p>
+    </div>
+
+    <script>
+        let loggedInUser = null;
+
+        function registerUser() {
+            let username = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+            if(username && password) {
+                loggedInUser = username;
+                document.getElementById('message').innerText = 'Welcome, ' + username + '!';
+                document.getElementById('authSection').style.display = 'none';
+                document.getElementById('uploadSection').style.display = 'block';
+            } else {
+                document.getElementById('message').innerText = 'Please fill out all fields.';
+            }
+        }
+
+        function uploadMusic() {
+            let fileInput = document.getElementById('musicFile');
+            if (fileInput.files.length > 0) {
+                let fileName = fileInput.files[0].name;
+                document.getElementById('uploadMessage').innerText = 'File "' + fileName + '" uploaded successfully!';
+            } else {
+                document.getElementById('uploadMessage').innerText = 'Please select a file to upload.';
+            }
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KJTooFlawless Music Distribution</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background: #222; color: white; padding: 20px; font-size: 24px; }
+        .container { margin: 50px auto; max-width: 600px; background: white; padding: 20px; border-radius: 8px; }
+        input, button { width: 100%; padding: 10px; margin: 10px 0; }
+        button { background: #222; color: white; border: none; cursor: pointer; }
+        button:hover { background: #444; }
+        #uploadSection { display: none; }
+    </style>
+</head>
+<body>
+    <header>KJTooFlawless Music Distribution</header>
+    <div class="container" id="authSection">
+        <h2>Sign Up / Log In</h2>
+        <input type="text" id="username" placeholder="Enter Username">
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="registerUser()">Sign Up / Log In</button>
+        <p id="message"></p>
+    </div>
+
+    <div class="container" id="uploadSection">
+        <h2>Upload Your Music</h2>
+        <input type="file" id="musicFile" accept="audio/*">
+        <button onclick="uploadMusic()">Upload</button>
+        <p id="uploadMessage"></p>
+    </div>
+
+    <script>
+        let loggedInUser = null;
+
+        function registerUser() {
+            let username = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+            if(username && password) {
+                loggedInUser = username;
+                document.getElementById('message').innerText = 'Welcome, ' + username + '!';
+                document.getElementById('authSection').style.display = 'none';
+                document.getElementById('uploadSection').style.display = 'block';
+            } else {
+                document.getElementById('message').innerText = 'Please fill out all fields.';
+            }
+        }
+
+        function uploadMusic() {
+            let fileInput = document.getElementById('musicFile');
+            if (fileInput.files.length > 0) {
+                let fileName = fileInput.files[0].name;
+                document.getElementById('uploadMessage').innerText = 'File "' + fileName + '" uploaded successfully!';
+            } else {
+                document.getElementById('uploadMessage').innerText = 'Please select a file to upload.';
+            }
+        }
+    </script>
+</body>
+</html>
